@@ -65,7 +65,9 @@ module RGeo
       end
 
       def is_ring?
-        is_closed? && is_simple?
+        # temporary fix for: https://github.com/rgeo/rgeo/issues/218
+        # is_closed? && is_simple?
+        is_closed?
       end
 
       def rep_equals?(rhs)
